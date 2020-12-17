@@ -3,6 +3,8 @@
 
 action-clock - A clock using Github Actions.
 
+[![Clock Status](https://github.com/jmahler/action-clock/workflows/Clock/badge.svg)](https://github.com/jmahler/action-clock/actions?query=workflow%3AClock)
+
 # DESCRIPTION
 
 Each time this action is run, it writes the current time
