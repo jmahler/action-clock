@@ -1,0 +1,20 @@
+name: Clock
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: date -u > TIME.out
+      - name: git config user
+        run: |
+          git config user.email "nobody@github.com"
+          git config user.name "${GITHUB_ACTOR} bot"
+      - name: commit TIME.out
+        run: |
+          git add TIME.out
+          git commit -m "$(cat TIME.out)" || true
+          git push
