@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: date +"%Y-%m-%d %H:%M:%S" >> TIME.out
+      - run: date +"%s" >> TIME.out
       - name: git config user
         run: |
           git config user.email "nobody@github.com"
