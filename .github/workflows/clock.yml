@@ -16,5 +16,5 @@ jobs:
       - name: commit TIME.out
         run: |
           git add TIME.out
-          git commit -m "$(cat TIME.out)" || true
+          git commit -m "$(cat TIME.out | tail -n 1)" || true
           git push
