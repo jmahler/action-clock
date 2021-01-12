@@ -7,6 +7,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: date +"%s" >> TIME.out
+      - name: debug
+        run: |
+          env
+          echo $EMAIL
       - name: git config user
         run: |
           git config user.email "nobody@github.com"
