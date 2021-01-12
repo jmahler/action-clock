@@ -19,7 +19,7 @@ Jeremiah Mahler &lt;jmmahler@gmail.com&gt;
 
 # COPYRIGHT
 
-Copyright &copy; 2020, Jeremiah Mahler.  All Rights Reserved.<br>
+Copyright &copy; 2021, Jeremiah Mahler.  All Rights Reserved.<br>
 This project is free software and released under
 the [GNU General Public License][gpl].
 
