@@ -13,7 +13,7 @@ jobs:
           echo $EMAIL
       - name: git config user
         run: |
-          git config user.email "nobody@github.com"
+          git config user.email "jmmahler@gmail.com"
           git config user.name "${GITHUB_ACTOR} bot"
       - name: commit TIME.out
         run: |
