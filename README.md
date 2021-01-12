@@ -11,7 +11,7 @@ Each time this action is run, it writes the current time
 to TIME.out, and commits the change, to this repo itself.
 Interestingly, the actual time between runs varies dramatically.
 
-![github-action-actual-time](https://raw.githubusercontent.com/jmahler/action-clock/main/github-action-actual-time.png)
+![github-action-actual-time](https://raw.githubusercontent.com/jmahler/action-clock/test/github-action-actual-time.png)
 
 # AUTHOR
 
