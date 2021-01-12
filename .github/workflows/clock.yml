@@ -17,4 +17,16 @@ jobs:
         run: |
           git add TIME.out
           git commit -m "$(cat TIME.out | tail -n 1)" || true
+      - name: setup R
+        run: |
+          sudo apt install r-base-core
+      - name: plot
+        run: |
+          ./plot.R
+      - name: commit new plot
+        run: |
+          git add github-action-actual-time.png
+          git commit -m "update plot"
+      - name: push changes
+        run: |
           git push
