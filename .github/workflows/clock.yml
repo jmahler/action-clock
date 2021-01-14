@@ -9,12 +9,15 @@ jobs:
       - run: date +"%s" >> TIME.out
       - name: debug
         run: |
-          env
-          echo $EMAIL
+          set +e
+          curl -s -u ${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }} https://api.github.com/users/${GITHUB_ACTOR} > ${GITHUB_ACTOR}.json
+          echo "EMAIL=$(cat ${GITHUB_ACTOR}.json | jq -r .email)" >> ${GITHUB_ENV}
+          echo "NAME=$(cat ${GITHUB_ACTOR}.json | jq  -r .name)" >> ${GITHUB_ENV}
       - name: git config user
         run: |
-          git config user.email "jmmahler@gmail.com"
-          git config user.name "${GITHUB_ACTOR} bot"
+          set +e
+          git config user.email "${EMAIL}"
+          git config user.name "${NAME}"
       - name: commit TIME.out
         run: |
           git add TIME.out
