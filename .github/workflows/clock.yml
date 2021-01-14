@@ -11,8 +11,9 @@ jobs:
       - run: date +"%s" >> TIME.out
       - name: git config user
         run: |
-          git config user.email "nobody@github.com"
-          git config user.name "${GITHUB_ACTOR} bot"
+          curl -s -u ${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }} https://api.github.com/users/${GITHUB_ACTOR} > ${GITHUB_ACTOR}.json
+          git config user.email "$(cat ${GITHUB_ACTOR}.json | jq -r .email)"
+          git config user.name "$(cat ${GITHUB_ACTOR}.json | jq  -r .name)"
       - name: commit TIME.out
         run: |
           git add TIME.out
