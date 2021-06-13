@@ -13,6 +13,10 @@ Interestingly, the actual time between runs varies dramatically.
 
 ![github-action-actual-time](https://raw.githubusercontent.com/jmahler/action-clock/main/github-action-actual-time.png)
 
+The number of commits made per day also vary dramatically.
+
+![github-action-commits-per-day](https://raw.githubusercontent.com/jmahler/action-clock/main/github-action-commits-per-day.png)
+
 # AUTHOR
 
 Jeremiah Mahler &lt;jmmahler@gmail.com&gt;

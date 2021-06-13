@@ -24,9 +24,11 @@ jobs:
       - name: plot
         run: |
           ./plot.R
+          ./plot-per-day.R
       - name: commit new plot
         run: |
           git add github-action-actual-time.png
+          git add github-action-commits-per-day.png
           git commit -m "update plot"
       - name: push changes
         run: |
